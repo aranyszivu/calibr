@@ -30,7 +30,7 @@ namespace BusinessLayer
             Saskatchewan,
             Yukon
         }
-        //Use cities included by target sites
+        //TODO: Use cities included by target sites
         public enum Cities
         {
             GTA,

@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnumTypes.cs" />
-    <Compile Include="ISearchParameters.cs" />
     <Compile Include="SearchParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
