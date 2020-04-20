@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using BL = BusinessLayer;
 
 namespace Scraper
 {
     class HtmlGetter
     {
-        public List<HtmlDocument> GetHtmlDocuments(BL.SearchParameters parameters)
+        public List<string> GetHtmlDocuments(BL.SearchParameters parameters)
         {
-            List<HtmlDocument> results = new List<HtmlDocument>();
+            List<string> results = new List<string>();
             foreach (BL.EnumTypes.Websites site in parameters.TargetSites) 
             {
                 results.Add(GetHtmlDocument(new BL.SearchParameters 
@@ -26,7 +23,7 @@ namespace Scraper
             }
             return results;
         }
-        public HtmlDocument GetHtmlDocument(BL.SearchParameters parameters) 
+        public string GetHtmlDocument(BL.SearchParameters parameters) 
         { 
             return GetHtmlResponse(BuildUrl(parameters));  
         }
@@ -36,9 +33,19 @@ namespace Scraper
             return UrlBuilder.BuildUrl(parameters);
         }
 
-        public HtmlDocument GetHtmlResponse(string strURL)
+        public string GetHtmlResponse(string strURL)
         {
-            return null;
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(strURL);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            if ((response.StatusCode != HttpStatusCode.OK) || !(response.ContentType.StartsWith("text/html"))) { HandleBadResponse(response); }
+
+            Stream responseStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(responseStream, System.Text.Encoding.UTF8);
+
+            return reader.ReadToEnd(); //Response HTML in String form
         }
+
+        public void HandleBadResponse(HttpWebResponse response) { }
     }
 }
