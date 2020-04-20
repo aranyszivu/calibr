@@ -66,5 +66,15 @@
       <LastGenOutput>UriLibrary.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{414fcb15-8086-439f-a94b-756ef360af4b}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\calibr\calibr.csproj">
+      <Project>{62293166-095c-4e23-a3d6-b6bbcd67f0e8}</Project>
+      <Name>calibr</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

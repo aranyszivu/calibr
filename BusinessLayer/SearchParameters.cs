@@ -8,7 +8,7 @@ namespace BusinessLayer
 {
     public class SearchParameters
     {
-        public EnumTypes.Websites TargetSite;
+        public List<EnumTypes.Websites> TargetSites;
         public EnumTypes.Regions Region;
         public EnumTypes.Cities City;
         public string Keywords;
