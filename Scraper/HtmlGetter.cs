@@ -12,7 +12,19 @@ namespace Scraper
     {
         public List<HtmlDocument> GetHtmlDocuments(BL.SearchParameters parameters)
         {
-            return null;
+            List<HtmlDocument> results = new List<HtmlDocument>();
+            foreach (BL.EnumTypes.Websites site in parameters.TargetSites) 
+            {
+                results.Add(GetHtmlDocument(new BL.SearchParameters 
+                                                { 
+                                                    TargetSites = new List<BL.EnumTypes.Websites> { site }, 
+                                                    Region = parameters.Region,
+                                                    City = parameters.City,
+                                                    Keywords = parameters.Keywords
+                                                }
+                                            ));
+            }
+            return results;
         }
         public HtmlDocument GetHtmlDocument(BL.SearchParameters parameters) 
         { 
