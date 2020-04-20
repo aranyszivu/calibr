@@ -103,10 +103,6 @@
       <Project>{62293166-095C-4E23-A3D6-B6BBCD67F0E8}</Project>
       <Name>calibr</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HtmlScraper\Scraper.csproj">
-      <Project>{4fc2e443-3ad5-4b23-98dd-99309b98217d}</Project>
-      <Name>Scraper</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

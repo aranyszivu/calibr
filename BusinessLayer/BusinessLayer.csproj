@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Scraper\HtmlGetter.cs">
+      <Link>HtmlGetter.cs</Link>
+    </Compile>
+    <Compile Include="..\Scraper\UriLoader.cs">
+      <Link>UriLoader.cs</Link>
+    </Compile>
     <Compile Include="EnumTypes.cs" />
     <Compile Include="ISearchParameters.cs" />
     <Compile Include="SearchParameters.cs" />
