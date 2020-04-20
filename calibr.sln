@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calibr", "calibr\calibr.csproj", "{62293166-095C-4E23-A3D6-B6BBCD67F0E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calibr.Tests", "calibr.Tests\calibr.Tests.csproj", "{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper", "Scraper\Scraper.csproj", "{7B212F4F-72F3-469D-9B35-2FD3DE421AED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62293166-095C-4E23-A3D6-B6BBCD67F0E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62293166-095C-4E23-A3D6-B6BBCD67F0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62293166-095C-4E23-A3D6-B6BBCD67F0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62293166-095C-4E23-A3D6-B6BBCD67F0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF65EDCE-9427-4963-AF0D-1C6E687BAD0B}
+	EndGlobalSection
+EndGlobal
