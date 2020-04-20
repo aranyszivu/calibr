@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\calibr\calibr.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Resources\HtmlLibrary.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

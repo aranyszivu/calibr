@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calibr", "calibr\calibr.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calibr.Tests", "calibr.Tests\calibr.Tests.csproj", "{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper", "Scraper\Scraper.csproj", "{7B212F4F-72F3-469D-9B35-2FD3DE421AED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper", "HtmlScraper\Scraper.csproj", "{4FC2E443-3AD5-4B23-98DD-99309B98217D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F249A02B-0DD4-423A-9A97-34B3BBFF6FE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B212F4F-72F3-469D-9B35-2FD3DE421AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC2E443-3AD5-4B23-98DD-99309B98217D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC2E443-3AD5-4B23-98DD-99309B98217D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC2E443-3AD5-4B23-98DD-99309B98217D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC2E443-3AD5-4B23-98DD-99309B98217D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
