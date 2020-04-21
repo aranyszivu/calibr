@@ -40,6 +40,17 @@ namespace Scraper
             {
                 strURL = manager.GetString("urifGunPostFilter");
                 Utilities.AddUrlParameter(ref strURL, "DOMAIN", manager.GetString("dmnGunPost"));
+
+                if (parameters.City == null && parameters.Region != null)
+                {
+                    Utilities.AddUrlParameter(ref strURL, "FILTERS", manager.GetString("urifRegion"));
+                    Utilities.AddUrlParameter(ref strURL, "REGION", parameters.Region.ToString());
+                }
+                else if (parameters.City != null && parameters.Region == null)
+                {
+                    Utilities.AddUrlParameter(ref strURL, "FILTERS", manager.GetString("urifCity"));
+                    Utilities.AddUrlParameter(ref strURL, "CITY", parameters.City.ToString());
+                }
             }
 
             return strURL;

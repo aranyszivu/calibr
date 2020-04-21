@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net;
+using System.IO;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace Scraper
@@ -11,13 +14,13 @@ namespace Scraper
         public static bool AddUrlParameter(ref string baseStr, string field, string parameter)
         {
             //Search Base String for field in format *[FIELD]*
-            for(int i=0; i<baseStr.Length; i++)
+            for (int i = 0; i < baseStr.Length; i++)
             {
-                if(baseStr[i] == '[')
+                if (baseStr[i] == '[')
                 {
                     string candidate = "";
                     int j = i;
-                    while (baseStr[j]+1 != ']')
+                    while (baseStr[j] + 1 != ']')
                     {
                         candidate += baseStr[j++];
                         if (candidate == field)
@@ -31,6 +34,21 @@ namespace Scraper
                 }
             }
             return false;
+        }
+        /// <summary>
+        /// Gets an MD5 Hash string of the image at a supplied URL
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetImageHash(string url)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using (Stream rawFS = response.GetResponseStream())
+            using (MD5 hasher = MD5.Create())
+            {
+                return BitConverter.ToString(hasher.ComputeHash(rawFS)).Replace("-", string.Empty);
+            }
         }
     }
 }
