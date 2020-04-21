@@ -50,6 +50,7 @@
       <DependentUpon>GunpostResources.resx</DependentUpon>
     </Compile>
     <Compile Include="UrlBuilder.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">

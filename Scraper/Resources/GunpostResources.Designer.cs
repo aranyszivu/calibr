@@ -68,5 +68,32 @@ namespace Scraper.Resources {
                 return ResourceManager.GetString("dmnGunPost", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string urifGunPostAd {
+            get {
+                return ResourceManager.GetString("urifGunPostAd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [DOMAIN]/ads/[FILTERS].
+        /// </summary>
+        internal static string urifGunPostFilter {
+            get {
+                return ResourceManager.GetString("urifGunPostFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [DOMAIN]/search/site/[KEYWORDS].
+        /// </summary>
+        internal static string urifGunPostSearch {
+            get {
+                return ResourceManager.GetString("urifGunPostSearch", resourceCulture);
+            }
+        }
     }
 }

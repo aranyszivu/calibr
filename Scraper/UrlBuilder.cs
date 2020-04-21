@@ -27,7 +27,22 @@ namespace Scraper
         private string AssembleGunPostUrl(BL.SearchParameters parameters)
         {
             manager = new ResourceManager("Scraper.Resources.GunpostResources", Assembly.GetExecutingAssembly());
-            return "";
+
+            string strURL;
+
+            if(parameters.Keywords != null) //Cant search categories and keywords concurrently on gunpost, for whatever reason
+            {
+                strURL = manager.GetString("urifGunPostSearch");
+                Utilities.AddUrlParameter(ref strURL, "DOMAIN", manager.GetString("dmnGunPost"));
+                Utilities.AddUrlParameter(ref strURL, "KEYWORDS", parameters.Keywords);
+            }
+            else
+            {
+                strURL = manager.GetString("urifGunPostFilter");
+                Utilities.AddUrlParameter(ref strURL, "DOMAIN", manager.GetString("dmnGunPost"));
+            }
+
+            return strURL;
         }
 
         private string AssembleFirearmsCanadaUrl(BL.SearchParameters parameters)

@@ -120,4 +120,13 @@
   <data name="dmnGunPost" xml:space="preserve">
     <value>www.gunpost.ca</value>
   </data>
+  <data name="urifGunPostAd" xml:space="preserve">
+    <value />
+  </data>
+  <data name="urifGunPostFilter" xml:space="preserve">
+    <value>[DOMAIN]/ads/[FILTERS]</value>
+  </data>
+  <data name="urifGunPostSearch" xml:space="preserve">
+    <value>[DOMAIN]/search/site/[KEYWORDS]</value>
+  </data>
 </root>
