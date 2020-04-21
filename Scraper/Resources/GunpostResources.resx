@@ -120,13 +120,46 @@
   <data name="dmnGunPost" xml:space="preserve">
     <value>www.gunpost.ca</value>
   </data>
+  <data name="rgnAlberta" xml:space="preserve">
+    <value>alberta-74</value>
+  </data>
+  <data name="rgnBritishColumbia" xml:space="preserve">
+    <value>british-columbia-158</value>
+  </data>
+  <data name="rgnManitoba" xml:space="preserve">
+    <value>manitoba-209</value>
+  </data>
+  <data name="rgnNewBrunswick" xml:space="preserve">
+    <value>new-brunswick-216</value>
+  </data>
+  <data name="rgnNewfoundland" xml:space="preserve">
+    <value>newfoundland-223</value>
+  </data>
+  <data name="rgnNovaScotia" xml:space="preserve">
+    <value>nova-scotia-230</value>
+  </data>
+  <data name="rgnOntario" xml:space="preserve">
+    <value>ontario-75</value>
+  </data>
+  <data name="rgnPrinceEdwardIsland" xml:space="preserve">
+    <value>prince-edward-island-242</value>
+  </data>
+  <data name="rgnQuebec" xml:space="preserve">
+    <value>quebec-246</value>
+  </data>
+  <data name="rgnSaskatchewan" xml:space="preserve">
+    <value>saskatchewan-280</value>
+  </data>
+  <data name="rgnTerritories" xml:space="preserve">
+    <value>territories-290</value>
+  </data>
   <data name="urifGunPostAd" xml:space="preserve">
-    <value />
+    <value>[DOMAIN]/[CATEGORY]/[TYPE]/[CITY]/[TITLE]</value>
   </data>
   <data name="urifGunPostFilter" xml:space="preserve">
     <value>[DOMAIN]/ads/[FILTERS]</value>
   </data>
-  <data name="urifGunPostSearch" xml:space="preserve">
-    <value>[DOMAIN]/search/site/[KEYWORDS]</value>
+  <data name="urifGunPostRegion" xml:space="preserve">
+    <value>[DOMAIN]/ads/l/[REGION]</value>
   </data>
 </root>

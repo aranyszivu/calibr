@@ -70,7 +70,106 @@ namespace Scraper.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to alberta-74.
+        /// </summary>
+        internal static string rgnAlberta {
+            get {
+                return ResourceManager.GetString("rgnAlberta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to british-columbia-158.
+        /// </summary>
+        internal static string rgnBritishColumbia {
+            get {
+                return ResourceManager.GetString("rgnBritishColumbia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to manitoba-209.
+        /// </summary>
+        internal static string rgnManitoba {
+            get {
+                return ResourceManager.GetString("rgnManitoba", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to new-brunswick-216.
+        /// </summary>
+        internal static string rgnNewBrunswick {
+            get {
+                return ResourceManager.GetString("rgnNewBrunswick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to newfoundland-223.
+        /// </summary>
+        internal static string rgnNewfoundland {
+            get {
+                return ResourceManager.GetString("rgnNewfoundland", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to nova-scotia-230.
+        /// </summary>
+        internal static string rgnNovaScotia {
+            get {
+                return ResourceManager.GetString("rgnNovaScotia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ontario-75.
+        /// </summary>
+        internal static string rgnOntario {
+            get {
+                return ResourceManager.GetString("rgnOntario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to prince-edward-island-242.
+        /// </summary>
+        internal static string rgnPrinceEdwardIsland {
+            get {
+                return ResourceManager.GetString("rgnPrinceEdwardIsland", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to quebec-246.
+        /// </summary>
+        internal static string rgnQuebec {
+            get {
+                return ResourceManager.GetString("rgnQuebec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to saskatchewan-280.
+        /// </summary>
+        internal static string rgnSaskatchewan {
+            get {
+                return ResourceManager.GetString("rgnSaskatchewan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to territories-290.
+        /// </summary>
+        internal static string rgnTerritories {
+            get {
+                return ResourceManager.GetString("rgnTerritories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [DOMAIN]/[CATEGORY]/[TYPE]/[CITY]/[TITLE].
         /// </summary>
         internal static string urifGunPostAd {
             get {
@@ -88,11 +187,11 @@ namespace Scraper.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [DOMAIN]/search/site/[KEYWORDS].
+        ///   Looks up a localized string similar to [DOMAIN]/ads/l/[REGION].
         /// </summary>
-        internal static string urifGunPostSearch {
+        internal static string urifGunPostRegion {
             get {
-                return ResourceManager.GetString("urifGunPostSearch", resourceCulture);
+                return ResourceManager.GetString("urifGunPostRegion", resourceCulture);
             }
         }
     }
