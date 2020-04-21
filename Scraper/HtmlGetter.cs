@@ -30,7 +30,7 @@ namespace Scraper
 
         public string BuildUrl(BL.SearchParameters parameters)
         {
-            return UrlBuilder.BuildUrl(parameters);
+            return (new UrlBuilder()).BuildUrl(parameters);
         }
 
         public string GetHtmlResponse(string strURL)
@@ -43,7 +43,7 @@ namespace Scraper
             Stream responseStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(responseStream, System.Text.Encoding.UTF8);
 
-            return reader.ReadToEnd(); //Response HTML in String form
+            return reader.ReadToEnd(); //Response HTML text in String form
         }
 
         public void HandleBadResponse(HttpWebResponse response) { }
