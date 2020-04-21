@@ -35,11 +35,12 @@ namespace Scraper
             }
             return false;
         }
+
         /// <summary>
         /// Gets an MD5 Hash string of the image at a supplied URL
         /// </summary>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="url">URL of image</param>
+        /// <returns>MD5 Hash of image</returns>
         public static string GetImageHash(string url)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
@@ -49,6 +50,19 @@ namespace Scraper
             {
                 return BitConverter.ToString(hasher.ComputeHash(rawFS)).Replace("-", string.Empty);
             }
+        }
+
+        public static string GetPageHtml(string strUrl)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(strUrl);
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using (Stream rawFS = response.GetResponseStream())
+            using (StreamReader reader = new StreamReader(rawFS))
+            {
+                return reader.ReadToEnd();
+            }
+
+
         }
     }
 }
