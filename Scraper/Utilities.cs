@@ -53,7 +53,7 @@ namespace Scraper
             }
         }
 
-        public static HtmlDocument GetPageHtml(string strUrl)
+        public static HtmlDocument GetHtmlDocument(string strUrl)
         {
             HtmlWeb web = new HtmlWeb();
             return web.Load(strUrl);
