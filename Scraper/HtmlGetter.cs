@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Net;
 using BusinessLayer;
 using HtmlAgilityPack;
 
@@ -8,7 +7,7 @@ namespace Scraper
 {
     class HtmlGetter
     {
-       public List<string> GetSearchHtml(EnumTypes.Websites site)
+       public List<HtmlDocument> GetSearchHtml(EnumTypes.Websites site)
         {
             switch(site)
             {
@@ -20,9 +19,9 @@ namespace Scraper
         }
 
         #region GunPost Methods
-        public List<string> GunPostSearch()
+        public List<HtmlDocument> GunPostSearch()
         {
-            List<string> HtmlResults = new List<string>();
+            List<HtmlDocument> HtmlResults = new List<HtmlDocument>();
             //Get First Results page
             Dictionary<EnumTypes.Regions, string> regionUrls = new Dictionary<EnumTypes.Regions, string>();
 
@@ -35,7 +34,7 @@ namespace Scraper
             //Get Pages from all regions
             foreach (KeyValuePair<EnumTypes.Regions, string> url in regionUrls)
             {
-                string firstPageHtml = Utilities.GetPageHtml(url.Value);
+                HtmlDocument firstPageHtml = Utilities.GetPageHtml(url.Value);
                 HtmlResults.Add(firstPageHtml);
 
                 //Very slow method (pagecrawling), replace with alternate method when possible
@@ -47,19 +46,19 @@ namespace Scraper
             return HtmlResults;
         }
 
-        private int GetNumPagesGunPost(string htmlText)
+        private int GetNumPagesGunPost(HtmlDocument htmlDoc)
         {
             return 1;
         }
 
         #endregion
 
-        public List<string> FirearmsCanadaSearch()
+        public List<HtmlDocument> FirearmsCanadaSearch()
         {
             return null;
         }
 
-        public List<string> TownPostSearch()
+        public List<HtmlDocument> TownPostSearch()
         {
             return null;
         }
