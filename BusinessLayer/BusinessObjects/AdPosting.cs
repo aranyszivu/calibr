@@ -10,6 +10,7 @@ namespace BusinessLayer.BusinessObjects
     {
         public string Title;
         public string Description;
+        public string PostingURL
         public int    Price;
         public string ImgUrl;
         public string ImgHash;
