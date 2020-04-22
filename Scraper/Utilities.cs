@@ -6,6 +6,7 @@ using System.Net;
 using System.IO;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
 
 namespace Scraper
 {
@@ -52,17 +53,10 @@ namespace Scraper
             }
         }
 
-        public static string GetPageHtml(string strUrl)
+        public static HtmlDoc GetPageHtml(string strUrl)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(strUrl);
-            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-            using (Stream rawFS = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(rawFS))
-            {
-                return reader.ReadToEnd();
-            }
-
-
+            HtmlWeb web = new HtmlWeb();
+            return web.Load(strUrl);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net;
 using BusinessLayer;
+using HtmlAgilityPack;
 
 namespace Scraper
 {
