@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer
+namespace BusinessLayer.BusinessObjects
 {
-    class AdPosting
+    public class AdPosting
     {
         public string Title;
         public string Description;
