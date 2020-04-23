@@ -66,7 +66,7 @@ namespace Scraper
                 ImgUrl      = imageUrl,
                 ImgHash     = imageHash,
                 Price       = Int32.Parse(infoRoot.FirstChild.LastChild.InnerText.Substring(1)), //All but first '$' character
-                //extract city from Ad Url (format: "www.gunpost.ca/[TYPE]/[CATEGORY]/[CITY]/[TITLE-ABBREV]")
+                //extract city from Ad Url (format: "[https://]www.gunpost.ca/[TYPE]/[CATEGORY]/[CITY]/[TITLE-ABBREV]")
                 City        = postingUrl.Substring(8).Split('/')[4] //Substring to remove 'https://' from URL
             };
         }
