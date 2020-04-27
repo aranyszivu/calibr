@@ -11,16 +11,35 @@ namespace Scraper
 {
     class HtmlDecoder
     {
+        /// <summary>
+        /// Given a list of HTML Pages for Search Results, calls assembler for each page.
+        /// </summary>
+        /// <param name="rawHtmlList">List object of all pages</param>
+        /// <returns>List of all Ad Objects</returns>
         public Dictionary<string, BO.AdPosting> GetAdList(List<HtmlDocument> rawHtmlList)
         {
             return null;
         }
 
+        /// <summary>
+        /// Given an HtmlDocument for a results page, separates the individual Ad Nodes and calls assembler function on each
+        /// </summary>
+        /// <param name="rawHtml">Raw HTML text for a single page of results</param>
+        /// <returns>List of all AdPosting objects assembled from page</returns>
         private Dictionary<string, BO.AdPosting> GetAdsFromPage(HtmlDocument rawHtml)
         {
+
+            HtmlNode AdListRoot = rawHtml.DocumentNode.LastChild;
+
+
             return null;
         }
 
+        /// <summary>
+        /// Assembles AdPosting object from information found in a single Ad HTML Node
+        /// </summary>
+        /// <param name="adNode">Root HTML Node of a single ad posting</param>
+        /// <returns>BusinessLayer.BusinessObjects.Adposting object</returns>
         private BO.AdPosting GetAdFromAdNode(HtmlNode adNode)
         {
             #region Node Format
