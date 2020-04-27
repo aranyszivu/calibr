@@ -29,6 +29,7 @@ namespace Scraper
         private Dictionary<string, BO.AdPosting> GetAdsFromPage(HtmlDocument rawHtml)
         {
 
+            // html/body/
             HtmlNode AdListRoot = rawHtml.DocumentNode.LastChild;
 
 
