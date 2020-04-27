@@ -16,17 +16,25 @@ namespace Scraper
         /// </summary>
         /// <param name="rawHtmlList">List object of all pages</param>
         /// <returns>List of all Ad Objects</returns>
-        public Dictionary<string, BO.AdPosting> GetAdList(List<HtmlDocument> rawHtmlList)
+        public List<BO.AdPosting> GetAdList(List<HtmlDocument> rawHtmlList)
         {
-            return null;
+            List<BO.AdPosting> results = GetAdsFromPage(rawHtmlList.First(), true);
+
+            foreach (HtmlDocument doc in rawHtmlList.Skip(1))
+            {
+                results.AddRange(GetAdsFromPage(doc, false));
+            }
+
+            return results;
         }
 
         /// <summary>
         /// Given an HtmlDocument for a results page, separates the individual Ad Nodes and calls assembler function on each
         /// </summary>
         /// <param name="rawHtml">Raw HTML text for a single page of results</param>
+        /// <param name="getFeaturedAds">Inidcates whether or not to retrieve the featured ads duplicated on every page</param>
         /// <returns>List of all AdPosting objects assembled from page</returns>
-        private Dictionary<string, BO.AdPosting> GetAdsFromPage(HtmlDocument rawHtml)
+        private List<BO.AdPosting> GetAdsFromPage(HtmlDocument rawHtml, bool getFeaturedAds)
         {
 
             // html/body/div[page]/div[columns]/div[content-column]/div[content-inner]/section[main-content]/div[content]/div[block-system-main]/div
@@ -63,8 +71,27 @@ namespace Scraper
 			//root/div[view-content]
 			HtmlNode mainAdList = AdListRoot.FirstChild.NextSibling;
 
+            HtmlNode adNode;
+            List<BO.AdPosting> results = new List<BO.AdPosting>();
+            
+            if (!getFeaturedAds) goto skipFeaturedAds;
+            //extract featuredAds
+            adNode = featuredAdList.FirstChild;
+            while (adNode.NextSibling != null)
+            {
+                results.Add(GetAdFromAdNode(adNode));
+                adNode = adNode.NextSibling;
+            }
 
-            return null;
+        skipFeaturedAds:
+            adNode = mainAdList.FirstChild;
+            while(adNode.NextSibling != null)
+            {
+                results.Add(GetAdFromAdNode(adNode));
+                adNode = adNode.NextSibling;
+            }
+
+            return results;
         }
 
         /// <summary>
