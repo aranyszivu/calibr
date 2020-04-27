@@ -29,8 +29,39 @@ namespace Scraper
         private Dictionary<string, BO.AdPosting> GetAdsFromPage(HtmlDocument rawHtml)
         {
 
-            // html/body/
-            HtmlNode AdListRoot = rawHtml.DocumentNode.LastChild;
+            // html/body/div[page]/div[columns]/div[content-column]/div[content-inner]/section[main-content]/div[content]/div[block-system-main]/div
+            HtmlNode AdListRoot = rawHtml.DocumentNode                              //<html>
+                                    .LastChild                                      //  <body>
+                                        .SelectSingleNode("div[@id='page']")        //      <div id="page">
+                                            .LastChild                              //          <div id = "columns">
+                                                .FirstChild                         //              <div id = "content-column">
+                                                    .FirstChild                     //                  <div id = "content-inner">
+                                                        .FirstChild                 //                      <section id = "main-content">
+                                                            .LastChild              //                          <div id = "content">
+                                                                .FirstChild         //                              <div id = "block-system-main">
+                                                                    .FirstChild;    //                                  <div class = "view ...">
+
+            //root/div[attachment]/div[view]/div[view-content]
+            HtmlNode featuredAdList = AdListRoot.FirstChild.FirstChild.FirstChild;
+			#region Featured List Node Format
+			/*
+                <div class="attachment attachment-before">
+			        <div class="view view-classified-ads view-id-classified_ads view-display-id-attachment_1">
+				        <div class="view-content"> [FEATUREDADLIST node]
+					    	<div class="views-row views-row-[N] views-row-[ODD/EVEN] views-row-[FIRST/LAST]">
+							    [AD DATA]
+						    </div>
+					    </div>
+					    <div class="view-footer">
+						    <hr />
+					    </div>
+				    </div>
+			    </div>
+            */
+			#endregion
+
+			//root/div[view-content]
+			HtmlNode mainAdList = AdListRoot.FirstChild.NextSibling;
 
 
             return null;
