@@ -8,7 +8,8 @@ namespace Scraper
 {
     class HtmlGetter
     {
-       public List<HtmlDocument> GetSearchHtml(EnumTypes.Websites site)
+        //Controller will take care of source selection
+       /*public List<HtmlDocument> GetSearchHtml(EnumTypes.Websites site)
         {
             switch(site)
             {
@@ -17,7 +18,7 @@ namespace Scraper
                 case EnumTypes.Websites.TownPost: return TownPostSearch();
                 default: return null;
             }
-        }
+        }*/
 
         #region GunPost Methods
         public List<HtmlDocument> GunPostSearch()

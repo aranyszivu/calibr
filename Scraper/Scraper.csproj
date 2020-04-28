@@ -57,6 +57,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GunpostResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ScraperController.cs" />
     <Compile Include="UrlBuilder.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
