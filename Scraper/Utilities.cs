@@ -27,7 +27,7 @@ namespace Scraper
                         if (candidate == field)
                         {
                             //Replace field by sandwiching head/parameter/tail
-                            baseStr = baseStr.Substring(0, i) + parameter + baseStr.Substring(j + 2, baseStr.Length - (j + 2));
+                            baseStr = baseStr.Substring(0, i) + parameter + baseStr.Substring(j + 2);
                             return true;
                         }
                     }

@@ -10,14 +10,22 @@ namespace Scraper
 {
     class AdAssembler
     {
-        public List<string> ConvertAdsToJson(Dictionary<string, BO.AdPosting> adList)
+        public List<string> ConvertAdsToJson(List<BO.AdPosting> adList)
         {
-            return null;
+            List<string> JsonList = new List<string>();
+
+            foreach(BO.AdPosting ad in adList) 
+            {
+                //Note: URI not assigned to each document, only base info
+                JsonList.Add(JsonConvert.SerializeObject(ad)); 
+            }
+
+            return JsonList;
         }
 
-        private string ConvertAdToJson(BO.AdPosting ad)
+        public string ConvertAdToJson(BO.AdPosting ad)
         {
-            return null;
+            return JsonConvert.SerializeObject(ad);
         }
     }
 }
